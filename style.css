@@ -1,0 +1,302 @@
+:root {
+  --light-background: #f4f4f4;
+  --light-text: #333;
+  --light-secondary: #666;
+  --light-accent: #ddd;
+  --light-accent-secondary: #fff;
+  --light-border: #ddd;
+
+  --dark-background: #222;
+  --dark-text: #fff;
+  --dark-secondary: #ddd;
+  --dark-accent: #333;
+  --dark-accent-secondary: #555;
+  --dark-border: #777;
+
+  --particles-color: #ddd;
+
+  /* Set initial theme to light */
+  --background: var(--light-background);
+  --text: var(--light-text);
+  --secondary: var(--light-secondary);
+  --accent: var(--light-accent);
+  --accent-secondary: var(--light-accent-secondary);
+  --border: var(--light-border);
+}
+
+  /* Use the defined CSS variables for different elements */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    font-family: "Josefin Sans", Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .container {
+    overflow: auto;
+    /* height: calc(100vh - 60px); */
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "heading heading"
+      "contact email"
+      "objective objective"
+      "skills activities"
+      "education interests"
+      "footer footer";
+    /* background-color: var(--background); */
+    /* border: 1px solid var(--border); */
+}
+
+  .heading {
+    grid-area: heading;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .heading h1 {
+    font-size: 32px;
+    color: var(--text);
+    margin-bottom: 5px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+    color: var(--secondary);
+  }
+
+  .info {
+    grid-area: contact;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-secondary);
+    padding: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .info p {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-right: 10px;
+  }
+
+  .info a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .objective {
+    grid-area: objective;
+    background-color: var(--accent-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .objective h2 {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .objective p {
+    font-size: 14px;
+    color: var(--secondary);
+  }
+
+  .skills {
+    grid-area: skills;
+    background-color: var(--accent-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .skills h2 {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .skills p {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+  }
+
+  .skills ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .skills li {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 5px;
+  }
+
+  .education {
+    grid-area: education;
+    background-color: var(--accent-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .education h2 {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .education p {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 10px;
+  }
+
+  .activities {
+    grid-area: activities;
+    background-color: var(--accent-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .activities h2 {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .activities ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .activities li {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 5px;
+  }
+
+  .interests {
+    grid-area: interests;
+    background-color: var(--accent-secondary);
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .interests h2 {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .interests ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .interests li {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 5px;
+  }
+
+  footer {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 10px 20px;
+    text-align: center;
+    grid-area: footer;
+    font-size: 12px;
+    margin-top: auto;
+  }
+
+  footer p {
+    margin: 9px;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .social-icons a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .switch-theme {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.switch-theme:hover {
+  background-color: var(--accent-secondary);
+  transition: background-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.objective, .skills, .education, .activities, .interests {
+  animation: fadeIn 2s;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.heading {
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
